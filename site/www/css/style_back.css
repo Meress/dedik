@@ -1,0 +1,61 @@
+ body{
+ 	min-width: 675px;
+ }
+ .hr {
+    border: none; /* Убираем границу для браузера Firefox */
+    color: green; /* Цвет линии для остальных браузеров */
+    background-color: green; /* Цвет линии для браузера Firefox и Opera */
+    height: 2px; /* Толщина линии */
+ 
+   }
+.search_form{
+	text-align: center;
+	
+/*	border: 5px solid red;*/
+
+}
+.search_text{
+	width: 40%;
+}
+.button{
+	width: 10%;
+}
+.title{
+/*	border: 5px solid red;*/
+	text-align: center;
+	margin-top: 0%;
+}
+.table{
+	width: 100%;
+}
+.cell1{;
+/*	border: 1px solid gray;*/
+	width: 30%;
+	min-width:150px; 
+}
+.cell2{
+/*	border: 1px solid gray;*/
+	width: 30%;
+	min-width:150px; 
+}
+.cell3{
+/*	border: 1px solid gray;*/
+	width: 10%;
+	min-width: 90px;
+}
+.cell4{
+/*	border: 1px solid gray;*/
+	width: 30%;
+	min-width:150px; 
+}
+.main_cell{
+/*	border: 2px solid red;*/
+	text-align: center;
+	font-size: 20px;
+	font-weight: 600;
+}
+.cells{
+	text-align: center;
+	font-size: 18px;
+	font-weight: 400;	
+}

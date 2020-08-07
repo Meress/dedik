@@ -1,0 +1,11 @@
+From python:3.8.2
+
+RUN pip install psycopg2
+# RUN apt install php-pgsql
+RUN pip install flask
+# RUN mkdir -p /usr/src/app/
+WORKDIR /app
+COPY . /app
+
+CMD ["python3", "app.py"]
+

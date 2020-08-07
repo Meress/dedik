@@ -1,0 +1,96 @@
+body{
+	min-width: 992px;
+}
+.container{
+	/*border: 5px solid black;*/
+	min-width: 992px;
+}
+.screen1{
+	background-color: rgb(0,157,224);
+}
+.screen2{
+	background-color: green/*rgb(0,157,224)*/;
+}
+.pic1{
+	height: 100%;
+	/*padding-top: 25%;*/
+/*	border: 2px solid red;*/
+	position: absolute;
+    margin: auto;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.pic_box1{
+	
+	margin-top: 30px;
+/*	border: 2px solid gray;*/
+}
+.text_box1{
+	margin-top: 30px;
+/*	border: 2px solid red;*/
+}
+.title1{
+	text-align: center;
+	/*margin-top: 20px;*/
+	margin-bottom: 20px;
+	font-size: 40px;
+}
+.text1{
+	font-size: 24px;
+	padding-left: 5%;
+}
+.main_title{
+	/*color: rgb(66,66,66);*/
+	text-align: center;
+/*	border: 2px solid black;*/
+	margin-top: 40px;
+	margin-bottom: 65px;
+}
+.tit2{
+	color: rgb(66,66,66);
+	margin-bottom: 25px;
+}
+.box2{
+/*	border: 2px solid red;*/
+	/*margin-top: 50px;*/
+}
+
+.vl {
+	margin-top: 30px;
+    border-left: 6px solid green;
+    height: 350px;
+}
+
+.box3{
+	/*border: 7px solid purple;*/
+	margin: auto; 
+	width: 45%;
+}
+.last_title{
+	margin-bottom: 0px;
+}
+.last_text{
+	text-align: center;
+}
+#a{
+	margin-left: 4%;
+/*	border: 5px solid red;*/
+}
+#b{
+	margin-right: 4%;
+/*	border: 5px solid red;*/
+}
+#t{
+	margin-top: 20px; 
+}
+.screen3{
+	background-color: rgba(144,22,43,0.85)/*rgb(0,157,224)*/;
+}
+@media screen and (min-width:576px) and (max-width:768px) {
+	.container{
+	min-width: 992px;
+}
+}

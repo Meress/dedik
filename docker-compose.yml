@@ -1,0 +1,67 @@
+version: '3.1'
+
+networks:
+  postgres:
+
+services:
+  db:
+    image: postgres:12.2
+    container_name: postgres
+    ports:
+      - 5432:5432
+    volumes:
+      - ./pg_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: postgres_user
+      POSTGRES_PASSWORD: PasswordWithExtraSecurity
+      POSTGRES_DB: postgres_db
+      PGDATA: /var/lib/postgresql/data/pgdata
+    restart: always
+    networks:
+      - postgres
+
+  app:
+    image: dockerfile
+    container_name: app
+    ports:
+      - 3000:3000
+#    environment:
+    restart: always
+    networks:
+      - postgres
+    links:
+      - db
+  nginx:
+    image: nginx:1.19.1
+    container_name: nginx
+    restart: always
+    ports:
+    - 80:80
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./site/www:/site
+    links:
+      - php-fpm
+
+  php-fpm:
+    image: php:fpm
+    container_name: php-fpm
+    ports:
+      - "9000:9000"
+    volumes:
+      - ./site/www:/site
+    links:
+      - app
+
+
+
+#  elastic:
+#    image: 'library/elasticsearch:7.8.1'
+#    restart: always
+#    environment:
+#      - discovery.type=single-node
+#      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+##    networks:
+##      - elastic
+#    volumes:
+#      - "./elastic_data:/usr/share/elasticsearch/data"
