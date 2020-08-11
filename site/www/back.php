@@ -89,11 +89,11 @@
 
 		<?php
 
-		$connect = pg_connect("193.187.174.195", "postgres_user", "PasswordWithExtraSecurity", "postgres_db") or die("Error");
+		$connect = pg_connect("postgres", "postgres_user", "PasswordWithExtraSecurity", "postgres_db") or die("Error");
 
 		$search_get = $_GET['search'];
 
-		$sql = "SELECT * FROM `Pandora6` WHERE `product name` LIKE '%$search_get%' ";
+		$sql = "SELECT * FROM `Pandora6` WHERE `P_NAME` LIKE '%$search_get%' ";
 
 		$select = pg_query($connect, $sql);
 
@@ -102,8 +102,8 @@
 
 		<table class="table">
 			<tr>
-		   	<td class="cell1 cells"><?php echo $select_while['product name']; ?></td> <td class="cell2 cells"><?php echo $select_while['store name']; ?></td>
-		   	<td class="cell3 cells"><?php echo $select_while['price']; ?></td> <td class="cell4 cells"><?php echo $select_while['date/time']; ?></td>
+		   	<td class="cell1 cells"><?php echo $select_while['P_NAME']; ?></td> <td class="cell2 cells"><?php echo $select_while['S_NAME']; ?></td>
+		   	<td class="cell3 cells">Цена</td> <td class="cell4 cells">дата/время</td>
 		   </tr>
 		</table> 
 		<?php
