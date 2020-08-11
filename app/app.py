@@ -55,19 +55,18 @@ def post():
                     # print(d[1], file=sys.stderr)
                     # print(w[1], file=sys.stderr)
             cur = con.cursor()
-            # cur.execute('''CREATE TABLE Pandora6
-            #      (ID SERIAL,
-            #      S_NAME TEXT NOT NULL,
-            #      P_NAME TEXT NOT NULL);''')
-            #
-            # print("Table created successfully")
-            # con.commit()
+            cur.execute('''CREATE TABLE Pandora6
+                 (ID SERIAL,
+                 S_NAME TEXT NOT NULL,
+                 P_NAME TEXT NOT NULL);''')
 
-            # k = 1
+            print("Table created successfully")
+            con.commit()
+
 
             cur.execute("INSERT INTO Pandora6 (S_NAME, P_NAME) VALUES (%s,%s)",
                         (d[1], d[0]))
-            # k = k + 1
+
             cur.execute("SELECT ID, S_NAME, P_NAME from Pandora6")
             rows = cur.fetchall()
             print(rows, file=sys.stderr)
