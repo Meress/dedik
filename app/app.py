@@ -9,7 +9,7 @@ con = psycopg2.connect(
     user="postgres_user",
     password="PasswordWithExtraSecurity",
     host="postgres",
-    # port="5432:5432"
+    port="5432:5432"
 )
 print("Database opened successfully")
 
@@ -66,8 +66,8 @@ def post():
             # k = 1
 
             cur.execute("INSERT INTO Pandora6 (S_NAME, P_NAME) VALUES (%s,%s)",
-                            (d[1], d[0]))
-                # k = k + 1
+                        (d[1], d[0]))
+            # k = k + 1
             cur.execute("SELECT ID, S_NAME, P_NAME from Pandora6")
             rows = cur.fetchall()
             print(rows, file=sys.stderr)
@@ -78,7 +78,6 @@ def post():
             return str(a)
         else:
             return str(a)
-
 
 
 if __name__ == "__main__":
