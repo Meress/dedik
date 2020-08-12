@@ -31,27 +31,27 @@ services:
       - postgres
     links:
       - db
-#  nginx:
-#    image: nginx:1.19.1
-#    container_name: nginx
-#    restart: always
-#    ports:
-#    - 80:80
-#    volumes:
-#      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
-#      - ./site/www:/site
-#    links:
-#      - php-fpm
-#
-#  php-fpm:
-#    image: php:fpm
-#    container_name: php-fpm
-#    ports:
-#      - "9000:9000"
-#    volumes:
-#      - ./site/www:/site
-#    links:
-#      - app
+  nginx:
+    image: nginx:1.19.1
+    container_name: nginx
+    restart: always
+    ports:
+    - 80:80
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./site/www:/site
+    links:
+      - php-fpm
+
+  php-fpm:
+    image: php:fpm
+    container_name: php-fpm
+    ports:
+      - "9000:9000"
+    volumes:
+      - ./site/www:/site
+    links:
+      - app
 
 
 
