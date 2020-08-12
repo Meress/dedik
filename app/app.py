@@ -14,7 +14,7 @@ con = psycopg2.connect(
 print("Database opened successfully")
 
 cur = con.cursor()
-cur.execute('''CREATE TABLE Pandora6
+cur.execute('''CREATE TABLE Pandora2
      (ID SERIAL,
      S_NAME TEXT NOT NULL,
      P_NAME TEXT NOT NULL);''')
@@ -73,10 +73,10 @@ def post():
             # print("Table created successfully")
             # con.commit()
 
-            cur.execute("INSERT INTO Pandora6 (S_NAME, P_NAME) VALUES (%s,%s)",
+            cur.execute("INSERT INTO Pandora2 (S_NAME, P_NAME) VALUES (%s,%s)",
                         (d[1], d[0]))
 
-            cur.execute("SELECT ID, S_NAME, P_NAME from Pandora6")
+            cur.execute("SELECT ID, S_NAME, P_NAME from Pandora2")
             rows = cur.fetchall()
             print(rows, file=sys.stderr)
 
