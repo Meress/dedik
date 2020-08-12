@@ -13,6 +13,16 @@ con = psycopg2.connect(
 )
 print("Database opened successfully")
 
+cur = con.cursor()
+cur.execute('''CREATE TABLE Pandora6
+     (ID SERIAL,
+     S_NAME TEXT NOT NULL,
+     P_NAME TEXT NOT NULL);''')
+
+print("Table created successfully")
+con.commit()
+
+
 a = []
 app = Flask(__name__)
 
@@ -54,7 +64,7 @@ def post():
                     # print(w[0], file=sys.stderr)
                     # print(d[1], file=sys.stderr)
                     # print(w[1], file=sys.stderr)
-            cur = con.cursor()
+            # cur = con.cursor()
             # cur.execute('''CREATE TABLE Pandora6
             #      (ID SERIAL,
             #      S_NAME TEXT NOT NULL,
