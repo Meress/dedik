@@ -89,7 +89,7 @@ def post():
 
 
 if __name__ == "__main__":
-    app.run(host='193.187.174.195', port=3000, debug=True)
+    app.run(host='0.0.0.0', port=3000, debug=True)
 
 # d = []
 # f = open("log.csv", "r+")
