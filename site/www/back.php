@@ -89,11 +89,11 @@
 
 		<?php
 
-		$connect = pg_connect(host="193.187.174.195", "5432", "postgres_db", "postgres_user", "PasswordWithExtraSecurity") or die("Error");
+		$connect = pg_connect(host="193.187.174.195" port="5432", dbname="postgres_db" user="postgres_user" password="PasswordWithExtraSecurity") or die("Error");
 
 		$search_get = $_GET['search'];
 
-		$sql = "SELECT * FROM `Pandora6` WHERE `P_NAME` LIKE '%$search_get%' ";
+		$sql = "SELECT * FROM `Pandora2` WHERE `P_NAME` LIKE '%$search_get%' ";
 
 		$select = pg_query($connect, $sql);
 
