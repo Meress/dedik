@@ -89,7 +89,7 @@
 
 		<?php
 
-		$connect = pg_connect("193.187.174.195", "5432", "postgres_db", "postgres_user", "PasswordWithExtraSecurity") or die("Error");
+		$connect = pg_connect("193.187.174.195, 5432, postgres_db, postgres_user, PasswordWithExtraSecurity") or die("Error");
 
 		$search_get = $_GET['search'];
 
