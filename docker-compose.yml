@@ -44,7 +44,8 @@ services:
       - php-fpm
 
   php-fpm:
-    image: php:fpm
+#    image: php:fpm
+    image: dockerfilephp
     container_name: php-fpm
     ports:
       - "9000:9000"
