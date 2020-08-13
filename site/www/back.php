@@ -102,7 +102,7 @@
 
 		<table class="table">
 			<tr>
-		   	<td class="cell1 cells"><?php echo $select_while[`P_NAME`]; ?></td> <td class="cell2 cells"><?php echo $select_while['S_NAME']; ?></td>
+		   	<td class="cell1 cells"><?php var_dump($select_while); ?></td> <td class="cell2 cells"><?php echo $select_while['S_NAME']; ?></td>
 		   	<td class="cell3 cells">Цена</td> <td class="cell4 cells">дата/время</td>
 		   </tr>
 		</table> 
