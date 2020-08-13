@@ -93,7 +93,7 @@
 
 		$search_get = $_GET['search'];
 
-		$sql = "SELECT * FROM `Pandora2` WHERE `P_NAME` LIKE '%$search_get%' ";
+		$sql = "SELECT * FROM Pandora2 WHERE P_NAME LIKE '%$search_get%' ";
 
 		$select = pg_query($connect, $sql);
 
