@@ -3,7 +3,7 @@ version: '3.1'
 networks:
   postgres:
 
-#services:
+services:
 #  db:
 #    image: postgres:12.2
 #    container_name: postgres
@@ -43,8 +43,8 @@ networks:
       - ./site/www:/site
       - ./data/certbot/conf:/etc/letsencrypt
       - ./data/certbot/www:/var/www/certbot
-    links:
-      - php-fpm
+#    links:
+#      - php-fpm
 
   certbot:
     image: certbot/certbot
