@@ -5,7 +5,7 @@ if ! [ -x "$(command -v docker-compose)" ]; then
   exit 1
 fi
 
-domains=(pandora.ru www.pandora.ru)
+domains=(pandorasearch.ru www.pandorasearch.ru)
 rsa_key_size=4096
 data_path="./data/certbot"
 email="meress7777@gmail.com" # Adding a valid address is strongly recommended
