@@ -5,6 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<meta name="description" content="">
 		<meta name="author" content="">
+		<meta name="yandex-verification" content="a8f5b9cc475858db" />
 		<link rel="icon" href="../../../../favicon.ico">
 			<title>Pandora Search</title>
 			
